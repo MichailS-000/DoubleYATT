@@ -69,7 +69,7 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 
 	void Awake()
     {
-        if (view.IsMine)
+        if (!view.IsMine)
 		{
             Destroy(origin);
             Destroy(rb);
