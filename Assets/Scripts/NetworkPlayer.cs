@@ -4,6 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using Unity.XR.CoreUtils;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem.XR;
+using UnityEngine.Rendering.Universal;
 
 public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 {
@@ -68,13 +69,13 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 
 	void Awake()
     {
-        if (!view.IsMine)
+        if (view.IsMine)
 		{
             Destroy(origin);
             Destroy(rb);
             Destroy(XR_Origin);
             Destroy(tracketDriver);
-            DestroyImmediate(cam);
+            cam.gameObject.SetActive(false);
 
             foreach(GameObject go in objectsToDelete)
 			{
