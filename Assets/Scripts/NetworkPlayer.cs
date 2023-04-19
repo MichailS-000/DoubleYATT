@@ -2,6 +2,7 @@ using UnityEngine;
 using Photon.Pun;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using Unity.XR.CoreUtils;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 {
@@ -13,6 +14,7 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 
     [SerializeField] GameObject[] objectsToDelete;
 	[SerializeField] InputActionManager actionManager;
+    [SerializeField] ActionBasedController[] controllers;
 	[SerializeField] Rigidbody rb;
     [SerializeField] PhysicsOrigin origin;
     [SerializeField] XROrigin XR_Origin;
@@ -75,6 +77,11 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 			{
                 Destroy(go);
             }
+
+            foreach(ActionBasedController controller in controllers)
+			{
+                Destroy(controller);
+			}
 
             Destroy(actionManager);
         }
