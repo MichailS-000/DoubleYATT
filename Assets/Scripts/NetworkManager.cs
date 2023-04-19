@@ -10,6 +10,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void Log(string message)
 	{
         log.text += message + "\n";
+		Debug.Log(message);
 	}
 
     void Start()
@@ -23,16 +24,25 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Log("Connected to master server");
 	}
 
+	public override void OnJoinRandomFailed(short returnCode, string message)
+	{
+		CreateRoom();
+	}
+
 	public void JoinRoom()
 	{
-		PhotonNetwork.JoinRandomOrCreateRoom();
+		PhotonNetwork.JoinRandomRoom();
 	}
 
     public void CreateRoom()
 	{
+		string name = Random.Range(float.MinValue, float.MaxValue).ToString();
 		RoomOptions roomOptions = new RoomOptions();
 		roomOptions.MaxPlayers = 8;
-		PhotonNetwork.CreateRoom(Random.Range(float.MinValue, float.MaxValue).ToString(), roomOptions);
+		Debug.Log(name.GetHashCode());
+		roomOptions.CustomRoomProperties = new ExitGames.Client.Photon.Hashtable();
+		roomOptions.CustomRoomProperties.Add("seed", name.GetHashCode());
+		PhotonNetwork.CreateRoom(name, roomOptions);
 	}
 
 	public override void OnJoinedRoom()
