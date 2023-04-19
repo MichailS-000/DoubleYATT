@@ -11,6 +11,7 @@ public class Generator : MonoBehaviour
 	private void Start()
 	{
 		seed = (int)PhotonNetwork.CurrentRoom.CustomProperties["seed"];
+		Debug.Log("Current seed: " + seed);
 
 		Transform random = playerSpawnPositions[Random.Range(0, playerSpawnPositions.Length)];
 		PhotonNetwork.Instantiate(player.name, random.position, random.rotation);

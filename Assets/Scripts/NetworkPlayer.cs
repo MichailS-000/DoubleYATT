@@ -1,6 +1,7 @@
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
+using Unity.XR.CoreUtils;
 
 public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 {
@@ -14,6 +15,8 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 	[SerializeField] InputActionManager actionManager;
 	[SerializeField] Rigidbody rb;
     [SerializeField] PhysicsOrigin origin;
+    [SerializeField] XROrigin XR_Origin;
+    [SerializeField] Camera cam;
 
     void SendTransform(PhotonStream stream, Transform transf)
 	{
@@ -65,7 +68,7 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 		{
             Destroy(origin);
             Destroy(rb);
-            Camera cam = headTransform.gameObject.GetComponent<Camera>();
+            Destroy(XR_Origin);
             Destroy(cam);
 
             foreach(GameObject go in objectsToDelete)
