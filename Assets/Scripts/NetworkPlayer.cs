@@ -65,7 +65,8 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 		{
             Destroy(origin);
             Destroy(rb);
-            Destroy(headTransform.gameObject.GetComponent<Camera>());
+            Camera cam = headTransform.gameObject.GetComponent<Camera>();
+            Destroy(cam);
 
             foreach(GameObject go in objectsToDelete)
 			{
