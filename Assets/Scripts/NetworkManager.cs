@@ -1,4 +1,5 @@
 using Photon.Pun;
+using Photon.Realtime;
 using TMPro;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void Log(string message)
 	{
-        log.text.Insert(0, message + "\n");
+        log.text += message + "\n";
 	}
 
     void Start()
@@ -20,5 +21,22 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 	public override void OnConnectedToMaster()
 	{
         Log("Connected to master server");
+	}
+
+	public void JoinRoom()
+	{
+		PhotonNetwork.JoinRandomOrCreateRoom();
+	}
+
+    public void CreateRoom()
+	{
+		RoomOptions roomOptions = new RoomOptions();
+		roomOptions.MaxPlayers = 8;
+		PhotonNetwork.CreateRoom(Random.Range(float.MinValue, float.MaxValue).ToString(), roomOptions);
+	}
+
+	public override void OnJoinedRoom()
+	{
+		PhotonNetwork.LoadLevel(1);
 	}
 }
