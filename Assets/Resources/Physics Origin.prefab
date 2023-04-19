@@ -1085,7 +1085,7 @@ MonoBehaviour:
   - {fileID: 4826398306989985622}
   actionManager: {fileID: 4826398306875654457}
   rb: {fileID: 4826398306875654460}
-  origin: {fileID: 0}
+  origin: {fileID: 4826398306555924321}
 --- !u!114 &9045158038740782262
 MonoBehaviour:
   m_ObjectHideFlags: 0
