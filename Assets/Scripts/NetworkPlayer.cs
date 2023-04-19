@@ -4,13 +4,19 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using Unity.XR.CoreUtils;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem.XR;
-using UnityEngine.Rendering.Universal;
+using System.Collections.Generic;
+
+struct LerpTransform
+{
+    public Vector3 pos;
+    public Quaternion rot;
+}
 
 public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 {
     [SerializeField] Transform headTransform;
-    [SerializeField] Transform leftHeadTransform;
-    [SerializeField] Transform rightHeadTransform;
+    [SerializeField] Transform leftHandTransform;
+    [SerializeField] Transform rightHandTransform;
 
     [SerializeField] PhotonView view;
 
@@ -22,6 +28,8 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
     [SerializeField] XROrigin XR_Origin;
     [SerializeField] TrackedPoseDriver tracketDriver;        
     [SerializeField] Camera cam;
+
+    Dictionary<Transform, LerpTransform> lerpTransforms = new Dictionary<Transform, LerpTransform>();
 
     void SendTransform(PhotonStream stream, Transform transf)
 	{
@@ -38,37 +46,60 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 
     void ApplyTransform(PhotonStream stream, Transform transf)
 	{
+        LerpTransform lerpTransform = new LerpTransform();
+
         float[] values = new float[4];
         values[0] = (float)stream.ReceiveNext();
         values[1] = (float)stream.ReceiveNext();
 		values[2] = (float)stream.ReceiveNext();
-        transf.position = new Vector3(values[0], values[1], values[2]);
+		lerpTransform.pos = new Vector3(values[0], values[1], values[2]);
 
 		values[0] = (float)stream.ReceiveNext();
 		values[1] = (float)stream.ReceiveNext();
 		values[2] = (float)stream.ReceiveNext();
 		values[3] = (float)stream.ReceiveNext();
-        transf.rotation = new Quaternion(values[0], values[1], values[2], values[3]);
+        lerpTransform.rot = new Quaternion(values[0], values[1], values[2], values[3]);
+
+        lerpTransforms[transf] = lerpTransform;
     }
+
+	private void Update()
+	{
+		if (!view.IsMine)
+		{
+            headTransform.position = Vector3.Lerp(headTransform.position, lerpTransforms[headTransform].pos, 5f * Time.deltaTime);
+            headTransform.rotation = Quaternion.Lerp(headTransform.rotation, lerpTransforms[headTransform].rot, 5f * Time.deltaTime);
+
+            leftHandTransform.position = Vector3.Lerp(leftHandTransform.position, lerpTransforms[leftHandTransform].pos, 5f * Time.deltaTime);
+            leftHandTransform.rotation = Quaternion.Lerp(leftHandTransform.rotation, lerpTransforms[leftHandTransform].rot, 5f * Time.deltaTime);
+
+            rightHandTransform.position = Vector3.Lerp(rightHandTransform.position, lerpTransforms[rightHandTransform].pos, 5f * Time.deltaTime);
+            rightHandTransform.rotation = Quaternion.Lerp(rightHandTransform.rotation, lerpTransforms[rightHandTransform].rot, 5f * Time.deltaTime);
+        }
+	}
 
 	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
         if (stream.IsWriting)
 		{
             SendTransform(stream, headTransform);
-            SendTransform(stream, leftHeadTransform);
-            SendTransform(stream, rightHeadTransform);
+            SendTransform(stream, leftHandTransform);
+            SendTransform(stream, rightHandTransform);
 		}
 		else
 		{
             ApplyTransform(stream, headTransform);
-            ApplyTransform(stream, leftHeadTransform);
-            ApplyTransform(stream, rightHeadTransform);
+            ApplyTransform(stream, leftHandTransform);
+            ApplyTransform(stream, rightHandTransform);
 		}
 	}
 
 	void Awake()
     {
+        lerpTransforms.Add(headTransform, new LerpTransform() { pos = headTransform.position, rot = headTransform.rotation });
+        lerpTransforms.Add(leftHandTransform, new LerpTransform() { pos = leftHandTransform.position, rot = leftHandTransform.rotation });
+        lerpTransforms.Add(rightHandTransform, new LerpTransform() { pos = rightHandTransform.position, rot = rightHandTransform.rotation });
+
         if (!view.IsMine)
 		{
             Destroy(origin);
