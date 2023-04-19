@@ -1,9 +1,34 @@
 fileFormatVersion: 2
-guid: 0589a27fe615bef46b8b4f2c49b34407
+guid: 2eaee1d6326c4ff40a7c5b94d10e8ecf
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BAse
+    second: {fileID: 2100000, guid: 3b316148284e0414c876030adcdc75df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick
+    second: {fileID: 2100000, guid: 4d7ea4b3e1d4b8a4997acd35e8cfc3cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick_
+    second: {fileID: 2100000, guid: b9ddfe9a21756374cb7671435c958dd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: f9cda1a6adcae0044a70e553006b8303, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: platforma
+    second: {fileID: 2100000, guid: 05e45a01dbdd1904f951abda1d2d9fcf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
