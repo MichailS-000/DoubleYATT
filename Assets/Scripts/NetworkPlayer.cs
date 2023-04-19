@@ -20,6 +20,8 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 
     [SerializeField] PhotonView view;
 
+    [SerializeField] float smooth = 10f;
+
     [SerializeField] GameObject[] objectsToDelete;
 	[SerializeField] InputActionManager actionManager;
     [SerializeField] ActionBasedController[] controllers;
@@ -67,14 +69,14 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 	{
 		if (!view.IsMine)
 		{
-            headTransform.position = Vector3.Lerp(headTransform.position, lerpTransforms[headTransform].pos, 5f * Time.deltaTime);
-            headTransform.rotation = Quaternion.Lerp(headTransform.rotation, lerpTransforms[headTransform].rot, 5f * Time.deltaTime);
+            headTransform.position = Vector3.Lerp(headTransform.position, lerpTransforms[headTransform].pos, smooth * Time.deltaTime);
+            headTransform.rotation = Quaternion.Lerp(headTransform.rotation, lerpTransforms[headTransform].rot, smooth * Time.deltaTime);
 
-            leftHandTransform.position = Vector3.Lerp(leftHandTransform.position, lerpTransforms[leftHandTransform].pos, 5f * Time.deltaTime);
-            leftHandTransform.rotation = Quaternion.Lerp(leftHandTransform.rotation, lerpTransforms[leftHandTransform].rot, 5f * Time.deltaTime);
+            leftHandTransform.position = Vector3.Lerp(leftHandTransform.position, lerpTransforms[leftHandTransform].pos, smooth * Time.deltaTime);
+            leftHandTransform.rotation = Quaternion.Lerp(leftHandTransform.rotation, lerpTransforms[leftHandTransform].rot, smooth * Time.deltaTime);
 
-            rightHandTransform.position = Vector3.Lerp(rightHandTransform.position, lerpTransforms[rightHandTransform].pos, 5f * Time.deltaTime);
-            rightHandTransform.rotation = Quaternion.Lerp(rightHandTransform.rotation, lerpTransforms[rightHandTransform].rot, 5f * Time.deltaTime);
+            rightHandTransform.position = Vector3.Lerp(rightHandTransform.position, lerpTransforms[rightHandTransform].pos, smooth * Time.deltaTime);
+            rightHandTransform.rotation = Quaternion.Lerp(rightHandTransform.rotation, lerpTransforms[rightHandTransform].rot, smooth * Time.deltaTime);
         }
 	}
 
