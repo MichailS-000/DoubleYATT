@@ -1,8 +1,16 @@
 using Photon.Pun;
+using TMPro;
 using UnityEngine;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    [SerializeField] TMP_Text log;
+
+    void Log(string message)
+	{
+        log.text.Insert(0, message + "\n");
+	}
+
     void Start()
     {
         PhotonNetwork.GameVersion = Application.version;
@@ -11,6 +19,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
 	public override void OnConnectedToMaster()
 	{
-        Debug.Log("Connected to master server");
+        Log("Connected to master server");
 	}
 }
