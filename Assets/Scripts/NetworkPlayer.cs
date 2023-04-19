@@ -66,7 +66,7 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 		}
 	}
 
-	void Start()
+	void Awake()
     {
         if (!view.IsMine)
 		{
@@ -74,6 +74,7 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
             Destroy(rb);
             Destroy(XR_Origin);
             Destroy(tracketDriver);
+            DestroyImmediate(cam);
 
             foreach(GameObject go in objectsToDelete)
 			{

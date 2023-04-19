@@ -1172,6 +1172,7 @@ MonoBehaviour:
   rb: {fileID: 4826398306875654460}
   origin: {fileID: 4826398306555924321}
   XR_Origin: {fileID: 4826398306875654462}
+  tracketDriver: {fileID: 0}
   cam: {fileID: 4826398306989985627}
 --- !u!114 &9045158038740782262
 MonoBehaviour:
