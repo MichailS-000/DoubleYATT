@@ -21,19 +21,20 @@ public class Generator : MonoBehaviour
 	[SerializeField] GeneratorSegment[] segments;
 
 	GeneratorSegment lastGenerated;
-	Vector3 lastGeneratedPosition = Vector3.zero;
+	Vector3 lastGeneratedPosition = Vector3.down;
 	int lastGeneratedRotation = 0;
 
 	int seed;
 
 	void CreateSegment(int segmentId)
 	{
-		lastGeneratedPosition = lastGeneratedPosition + lastGenerated.postGenerationAnchor + segments[segmentId].preGenerationAnchor;
+		lastGeneratedRotation = lastGenerated.possibleRotationOffsets[Random.Range(0, lastGenerated.possibleRotationOffsets.Length)] + lastGeneratedRotation;
+		lastGeneratedPosition = lastGeneratedPosition + Quaternion.Euler(0, lastGeneratedRotation, 0) * (lastGenerated.postGenerationAnchor + segments[segmentId].preGenerationAnchor);
 
 		Instantiate(segments[segmentId].segmentObject,
 			lastGeneratedPosition,
 			Quaternion.Euler(0,
-			0, 0));
+			lastGeneratedRotation, 0));
 
 		lastGenerated = segments[segmentId];
 	}
@@ -49,7 +50,7 @@ public class Generator : MonoBehaviour
 
 		PhotonNetwork.Instantiate(player.name, random.position, random.rotation);
 
-		lastGenerated = segments[0];
+		lastGenerated = segments[1];
 
 		CreateSegment(1);
 
