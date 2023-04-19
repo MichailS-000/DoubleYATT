@@ -1276,8 +1276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTransform: {fileID: 4826398306989985623}
-  leftHeadTransform: {fileID: 4826398306042714962}
-  rightHeadTransform: {fileID: 4826398306770146055}
+  leftHandTransform: {fileID: 4826398306042714962}
+  rightHandTransform: {fileID: 4826398306770146055}
   view: {fileID: 9045158038740782262}
   objectsToDelete:
   - {fileID: 4826398306977414566}
