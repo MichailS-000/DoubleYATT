@@ -15,19 +15,47 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 	[SerializeField] Rigidbody rb;
     [SerializeField] PhysicsOrigin origin;
 
+    void SendTransform(PhotonStream stream, Transform transf)
+	{
+        Vector3 position = transf.position;
+        stream.SendNext(position.x);
+        stream.SendNext(position.y);
+        stream.SendNext(position.z);
+        Quaternion quaternion = transf.rotation;
+        stream.SendNext(quaternion.x);
+        stream.SendNext(quaternion.y);
+        stream.SendNext(quaternion.z);
+        stream.SendNext(quaternion.w);
+    }
+
+    void ApplyTransform(PhotonStream stream, Transform transf)
+	{
+        float[] values = new float[4];
+        values[0] = (float)stream.ReceiveNext();
+        values[1] = (float)stream.ReceiveNext();
+		values[2] = (float)stream.ReceiveNext();
+        transf.position = new Vector3(values[0], values[1], values[2]);
+
+		values[0] = (float)stream.ReceiveNext();
+		values[1] = (float)stream.ReceiveNext();
+		values[2] = (float)stream.ReceiveNext();
+		values[3] = (float)stream.ReceiveNext();
+        transf.rotation = new Quaternion(values[0], values[1], values[2], values[3]);
+    }
+
 	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
         if (stream.IsWriting)
 		{
-            stream.SendNext(headTransform);
-            stream.SendNext(leftHeadTransform);
-            stream.SendNext(rightHeadTransform);
+            SendTransform(stream, headTransform);
+            SendTransform(stream, leftHeadTransform);
+            SendTransform(stream, rightHeadTransform);
 		}
 		else
 		{
-            headTransform = (Transform)stream.ReceiveNext();
-            leftHeadTransform = (Transform)stream.ReceiveNext();
-            rightHeadTransform = (Transform)stream.ReceiveNext();
+            ApplyTransform(stream, headTransform);
+            ApplyTransform(stream, leftHeadTransform);
+            ApplyTransform(stream, rightHeadTransform);
 		}
 	}
 
