@@ -9,5 +9,6 @@ public class DeathTrigger : MonoBehaviour
 		other.transform.parent.position = spawnPoint.position;
 		other.attachedRigidbody.velocity = Vector3.zero;
 		other.transform.localPosition = Vector3.zero;
+
 	}
 }
