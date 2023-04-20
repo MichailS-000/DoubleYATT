@@ -28,8 +28,9 @@ public class GameNetworkManager : MonoBehaviourPunCallbacks
 		}
 
 		currentTime = 0;
-		player.position = Vector3.zero;
+		player.localPosition = Vector3.zero;
 		player.parent.position = spawn.position;
+		player.GetComponent<Rigidbody>().velocity = Vector3.zero;
 	}
 
 	private void Update()

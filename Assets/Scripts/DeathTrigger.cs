@@ -6,8 +6,8 @@ public class DeathTrigger : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		other.attachedRigidbody.velocity = Vector3.zero;
-		other.attachedRigidbody.position = Vector3.zero;
 		other.transform.parent.position = spawnPoint.position;
+		other.attachedRigidbody.velocity = Vector3.zero;
+		other.transform.localPosition = Vector3.zero;
 	}
 }

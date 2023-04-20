@@ -1362,6 +1362,10 @@ MonoBehaviour:
   tracketDriver: {fileID: 4826398306989985621}
   cam: {fileID: 4679235919081467958}
   headRenderer: {fileID: 5605877823150468331}
+  dynamycBodies:
+  - {fileID: 4826398306501920880}
+  - {fileID: 4826398305835488479}
+  - {fileID: 4826398307499955873}
 --- !u!114 &9045158038740782262
 MonoBehaviour:
   m_ObjectHideFlags: 0
