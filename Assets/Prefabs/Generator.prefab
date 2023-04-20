@@ -58,7 +58,7 @@ MonoBehaviour:
     postGenerationAnchor: {x: 0, y: 1, z: 0}
     preGenerationAnchor: {x: 0, y: 0, z: 0}
     possibleSegments: 0100000002000000
-    possibleRotationOffsets: 00000000
+    possibleRotationOffsets: 000000005a000000
   - segmentObject: {fileID: 7134141974201918418, guid: bd821e2d73283af479f5f15dae6167a6,
       type: 3}
     postGenerationAnchor: {x: 2, y: 0, z: 0}
@@ -76,4 +76,4 @@ MonoBehaviour:
     postGenerationAnchor: {x: 0, y: 1, z: 0}
     preGenerationAnchor: {x: 4, y: 0, z: 0}
     possibleSegments: 0100000002000000
-    possibleRotationOffsets: 00000000
+    possibleRotationOffsets: 000000005a000000
