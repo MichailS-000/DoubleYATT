@@ -57,7 +57,7 @@ MonoBehaviour:
       type: 3}
     postGenerationAnchor: {x: 0, y: 1, z: 0}
     preGenerationAnchor: {x: 0, y: 0, z: 0}
-    possibleSegments: 0100000002000000050000000600000009000000
+    possibleSegments: 01000000020000000500000006000000090000000c000000
     possibleRotationOffsets: 000000005a000000
   - segmentObject: {fileID: 7134141974201918418, guid: ab02d0effca438d4285ad3f3a3ce8c1a,
       type: 3}
@@ -81,7 +81,7 @@ MonoBehaviour:
       type: 3}
     postGenerationAnchor: {x: 0, y: 1, z: 0}
     preGenerationAnchor: {x: 0, y: 0, z: 0}
-    possibleSegments: 0100000002000000050000000600000009000000
+    possibleSegments: 01000000020000000500000006000000090000000c000000
     possibleRotationOffsets: 000000005a000000
   - segmentObject: {fileID: 4257544501625348984, guid: 1c1529d94ca3f4247aeaf035ce38028d,
       type: 3}
@@ -99,7 +99,7 @@ MonoBehaviour:
       type: 3}
     postGenerationAnchor: {x: 0, y: 1, z: 0}
     preGenerationAnchor: {x: 0, y: 0, z: 0}
-    possibleSegments: 0100000002000000050000000600000009000000
+    possibleSegments: 01000000020000000500000006000000090000000c000000
     possibleRotationOffsets: 000000005a000000
   - segmentObject: {fileID: 5131824073718990414, guid: 5d9ac0859c1f04846a351e096885625b,
       type: 3}
@@ -119,3 +119,9 @@ MonoBehaviour:
     preGenerationAnchor: {x: 0, y: 0, z: 0}
     possibleSegments: 0100000002000000050000000600000009000000
     possibleRotationOffsets: 000000005a000000
+  - segmentObject: {fileID: 4176069915773323389, guid: 2df4bd745217f8b4c9180bf8e20586d5,
+      type: 3}
+    postGenerationAnchor: {x: 0, y: 0, z: 0}
+    preGenerationAnchor: {x: 0, y: 0, z: 0}
+    possibleSegments: 
+    possibleRotationOffsets: 

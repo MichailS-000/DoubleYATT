@@ -54,7 +54,7 @@ public class Generator : MonoBehaviour
 
 		CreateSegment(1);
 
-		for (int i = 0; i < 20; i++)
+		while(lastGenerated != segments[segments.Length - 1])
 		{
 			CreateSegment(lastGenerated.possibleSegments[Random.Range(0, lastGenerated.possibleSegments.Length)]);
 		}
