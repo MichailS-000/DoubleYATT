@@ -873,6 +873,8 @@ GameObject:
   - component: {fileID: 302953637550897350}
   - component: {fileID: 8539029044334502863}
   - component: {fileID: 511616117242691186}
+  - component: {fileID: 5753992029223429452}
+  - component: {fileID: 4696377625978259481}
   m_Layer: 0
   m_Name: Plane.016
   m_TagString: Untagged
@@ -945,6 +947,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5753992029223429452
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007898547344812467}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.1025496, y: 0.2486651, z: 2.330309}
+  m_Center: {x: -0.48709512, y: -0.0668525, z: -0.0052283397}
+--- !u!114 &4696377625978259481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007898547344812467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8050def5c3df9304a91e02c0dcef537c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2131118258909479887
 GameObject:
   m_ObjectHideFlags: 0

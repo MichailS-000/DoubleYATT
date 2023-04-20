@@ -136,6 +136,7 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 		else
 		{
             headRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+            GameNetworkManager.instance.player = rb.transform;
         }
     }
 }
