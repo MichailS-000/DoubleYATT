@@ -65,13 +65,13 @@ MonoBehaviour:
     preGenerationAnchor: {x: 0, y: 0, z: 0}
     possibleSegments: 0300000004000000
     possibleRotationOffsets: 00000000
-  - segmentObject: {fileID: 8672280827197379044, guid: bc306248ce107384e954a3dc9b9cfbbb,
+  - segmentObject: {fileID: 8672280827197379044, guid: bd821e2d73283af479f5f15dae6167a6,
       type: 3}
     postGenerationAnchor: {x: 0, y: 0, z: 0}
     preGenerationAnchor: {x: 2, y: 0, z: 0}
     possibleSegments: 0300000004000000
     possibleRotationOffsets: 00000000
-  - segmentObject: {fileID: 1701147987221511369, guid: 1f1ed1c919c2a974c9185e7f634099ff,
+  - segmentObject: {fileID: 1701147987221511369, guid: bc306248ce107384e954a3dc9b9cfbbb,
       type: 3}
     postGenerationAnchor: {x: 0, y: 1, z: 0}
     preGenerationAnchor: {x: 4, y: 0, z: 0}
