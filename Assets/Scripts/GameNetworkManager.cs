@@ -27,7 +27,9 @@ public class GameNetworkManager : MonoBehaviourPunCallbacks
 			bestRecord = currentTime;
 		}
 
+		currentTime = 0;
 		player.position = spawn.position;
+		player.GetComponent<Rigidbody>().velocity = Vector3.zero;
 	}
 
 	private void Update()
