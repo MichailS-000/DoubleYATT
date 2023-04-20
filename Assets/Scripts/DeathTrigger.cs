@@ -4,9 +4,9 @@ public class DeathTrigger : MonoBehaviour
 {
 	[SerializeField] Transform spawnPoint;
 
-	private void OnCollisionEnter(Collision collision)
+	private void OnTriggerEnter(Collider other)
 	{
-		collision.collider.attachedRigidbody.velocity = Vector3.zero;
-		collision.rigidbody.position = spawnPoint.position;
+		other.attachedRigidbody.velocity = Vector3.zero;
+		other.attachedRigidbody.position = spawnPoint.position;
 	}
 }
