@@ -786,10 +786,10 @@
                 {
                     "name": "",
                     "id": "32ea0743-3cde-4149-a4f7-054cfc941fa3",
-                    "path": "<OculusRemote>/start",
+                    "path": "<OculusTouchController>{LeftHand}/menu",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false

@@ -84,7 +84,7 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
         }
 		else
 		{
-            if (leaveAction.action.ReadValue<bool>())
+            if (leaveAction.action.ReadValue<float>() > 0.5f)
 			{
                 PhotonNetwork.LeaveRoom();
 			}
