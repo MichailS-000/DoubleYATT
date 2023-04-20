@@ -30,7 +30,7 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
     [SerializeField] XROrigin XR_Origin;
     [SerializeField] TrackedPoseDriver tracketDriver;        
     [SerializeField] Camera cam;
-    [SerializeField] MeshRenderer headRenderer;    
+    [SerializeField] MeshRenderer headRenderer;
 
     Dictionary<Transform, LerpTransform> lerpTransforms = new Dictionary<Transform, LerpTransform>();
 
