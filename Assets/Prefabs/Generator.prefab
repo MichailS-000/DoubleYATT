@@ -57,7 +57,7 @@ MonoBehaviour:
       type: 3}
     postGenerationAnchor: {x: 0, y: 1, z: 0}
     preGenerationAnchor: {x: 0, y: 0, z: 0}
-    possibleSegments: 0100000002000000
+    possibleSegments: 0100000002000000050000000600000009000000
     possibleRotationOffsets: 000000005a000000
   - segmentObject: {fileID: 7134141974201918418, guid: ab02d0effca438d4285ad3f3a3ce8c1a,
       type: 3}
@@ -76,4 +76,46 @@ MonoBehaviour:
     postGenerationAnchor: {x: 0, y: 1, z: 0}
     preGenerationAnchor: {x: 4, y: 0, z: 0}
     possibleSegments: 0100000002000000
+    possibleRotationOffsets: 000000005a000000
+  - segmentObject: {fileID: 41458598253547552, guid: 015da1a1173b09a4491b20b3e90482e1,
+      type: 3}
+    postGenerationAnchor: {x: 0, y: 1, z: 0}
+    preGenerationAnchor: {x: 0, y: 0, z: 0}
+    possibleSegments: 0100000002000000050000000600000009000000
+    possibleRotationOffsets: 000000005a000000
+  - segmentObject: {fileID: 4257544501625348984, guid: 1c1529d94ca3f4247aeaf035ce38028d,
+      type: 3}
+    postGenerationAnchor: {x: 0, y: 1, z: 0}
+    preGenerationAnchor: {x: 0, y: 0, z: 0}
+    possibleSegments: 0700000008000000
+    possibleRotationOffsets: 00000000
+  - segmentObject: {fileID: 1137245014348610567, guid: a38ef0b5a421e7b4cb24ff9c5cedeb64,
+      type: 3}
+    postGenerationAnchor: {x: 0, y: 1, z: 0}
+    preGenerationAnchor: {x: 0, y: 0, z: 0}
+    possibleSegments: 0700000008000000
+    possibleRotationOffsets: 00000000
+  - segmentObject: {fileID: 5417889670141312156, guid: 70e9a281eea83694b936407330a71d05,
+      type: 3}
+    postGenerationAnchor: {x: 0, y: 1, z: 0}
+    preGenerationAnchor: {x: 0, y: 0, z: 0}
+    possibleSegments: 0100000002000000050000000600000009000000
+    possibleRotationOffsets: 000000005a000000
+  - segmentObject: {fileID: 5131824073718990414, guid: 5d9ac0859c1f04846a351e096885625b,
+      type: 3}
+    postGenerationAnchor: {x: 0, y: 2, z: 0}
+    preGenerationAnchor: {x: 0, y: 0, z: 0}
+    possibleSegments: 0a000000
+    possibleRotationOffsets: 00000000
+  - segmentObject: {fileID: 8947375605477744885, guid: 4ebaef2f88af7774fb65afbb54b0f1b8,
+      type: 3}
+    postGenerationAnchor: {x: 0, y: 0, z: 0}
+    preGenerationAnchor: {x: 0, y: 2, z: 0}
+    possibleSegments: 0a0000000b000000
+    possibleRotationOffsets: 00000000
+  - segmentObject: {fileID: 6295589600989600017, guid: 089319cb2f9b7fa40a061575a7ad3b03,
+      type: 3}
+    postGenerationAnchor: {x: 0, y: 1, z: 0}
+    preGenerationAnchor: {x: 0, y: 0, z: 0}
+    possibleSegments: 0100000002000000050000000600000009000000
     possibleRotationOffsets: 000000005a000000
