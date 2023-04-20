@@ -464,6 +464,9 @@ GameObject:
   - component: {fileID: 3058160150484319940}
   - component: {fileID: 2484119909891126496}
   - component: {fileID: 1478373761510270570}
+  - component: {fileID: 2937867826316903612}
+  - component: {fileID: 3660782225952402684}
+  - component: {fileID: 4767165815357508680}
   m_Layer: 0
   m_Name: F-brick.008
   m_TagString: Untagged
@@ -549,6 +552,58 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.061510853, y: 0.07436928, z: 0.12179739}
   m_Center: {x: -0.0022859676, y: -0.000000040978193, z: 0.000000026077032}
+--- !u!114 &2937867826316903612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2225548729568460403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593a5c1c7706ba54f9f81ba9fa29d3db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakTime: 3
+  rb: {fileID: 4767165815357508680}
+--- !u!114 &3660782225952402684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2225548729568460403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!54 &4767165815357508680
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2225548729568460403}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2724937628860394388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2463,6 +2518,9 @@ GameObject:
   - component: {fileID: 4470673854242090398}
   - component: {fileID: 1011798953628453349}
   - component: {fileID: 509423817834975523}
+  - component: {fileID: 8437024972265822021}
+  - component: {fileID: 4872290901742966000}
+  - component: {fileID: 5971890158865805192}
   m_Layer: 0
   m_Name: F-brick.009
   m_TagString: Untagged
@@ -2548,6 +2606,58 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.06151081, y: 0.07436925, z: 0.12179738}
   m_Center: {x: 0.0022859601, y: -0.000000031664968, z: -0.000000029802322}
+--- !u!114 &8437024972265822021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6351099936019548939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593a5c1c7706ba54f9f81ba9fa29d3db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakTime: 3
+  rb: {fileID: 5971890158865805192}
+--- !u!114 &4872290901742966000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6351099936019548939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!54 &5971890158865805192
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6351099936019548939}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6552438556234425915
 GameObject:
   m_ObjectHideFlags: 0

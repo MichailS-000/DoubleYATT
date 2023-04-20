@@ -5,6 +5,7 @@ using Unity.XR.CoreUtils;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem.XR;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 struct LerpTransform
 {
@@ -14,6 +15,8 @@ struct LerpTransform
 
 public class NetworkPlayer : MonoBehaviourPun, IPunObservable
 {
+    [SerializeField] InputActionProperty leaveAction;
+
     [SerializeField] Transform headTransform;
     [SerializeField] Transform leftHandTransform;
     [SerializeField] Transform rightHandTransform;
@@ -79,6 +82,13 @@ public class NetworkPlayer : MonoBehaviourPun, IPunObservable
             rightHandTransform.position = Vector3.Lerp(rightHandTransform.position, lerpTransforms[rightHandTransform].pos, smooth * Time.deltaTime);
             rightHandTransform.rotation = Quaternion.Lerp(rightHandTransform.rotation, lerpTransforms[rightHandTransform].rot, smooth * Time.deltaTime);
         }
+		else
+		{
+            if (leaveAction.action.ReadValue<bool>())
+			{
+                PhotonNetwork.LeaveRoom();
+			}
+		}
 	}
 
 	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

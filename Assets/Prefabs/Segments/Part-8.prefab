@@ -1405,6 +1405,7 @@ GameObject:
   - component: {fileID: 4443252069497348854}
   - component: {fileID: 6582944244772767477}
   - component: {fileID: 4718065571986368947}
+  - component: {fileID: 95742922029099600}
   m_Layer: 0
   m_Name: F-brick.011
   m_TagString: Untagged
@@ -1477,6 +1478,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &95742922029099600
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3828857988151519219}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12179738, y: 0.07436925, z: 0.061510812}
+  m_Center: {x: -0.000000029802322, y: -0.000000031664968, z: -0.0022859592}
 --- !u!1 &4268162144949228988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2462,6 +2476,7 @@ GameObject:
   - component: {fileID: 1096350425181923547}
   - component: {fileID: 5531815042875991571}
   - component: {fileID: 8110206144323978262}
+  - component: {fileID: 1996244715079038799}
   m_Layer: 0
   m_Name: F-brick.010
   m_TagString: Untagged
@@ -2534,3 +2549,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1996244715079038799
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437947521741682499}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12179738, y: 0.07436925, z: 0.061510816}
+  m_Center: {x: 0.000000029802322, y: -0.000000031664968, z: 0.002285961}

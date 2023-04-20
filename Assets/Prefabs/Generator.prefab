@@ -65,13 +65,13 @@ MonoBehaviour:
     preGenerationAnchor: {x: 0, y: 0, z: 0}
     possibleSegments: 0300000004000000
     possibleRotationOffsets: 00000000
-  - segmentObject: {fileID: 8672280827197379044, guid: bd821e2d73283af479f5f15dae6167a6,
+  - segmentObject: {fileID: 8672280827197379044, guid: bc306248ce107384e954a3dc9b9cfbbb,
       type: 3}
     postGenerationAnchor: {x: 0, y: 0, z: 0}
     preGenerationAnchor: {x: 2, y: 0, z: 0}
     possibleSegments: 0300000004000000
     possibleRotationOffsets: 00000000
-  - segmentObject: {fileID: 1701147987221511369, guid: bc306248ce107384e954a3dc9b9cfbbb,
+  - segmentObject: {fileID: 1701147987221511369, guid: 1f1ed1c919c2a974c9185e7f634099ff,
       type: 3}
     postGenerationAnchor: {x: 0, y: 1, z: 0}
     preGenerationAnchor: {x: 4, y: 0, z: 0}
@@ -83,13 +83,13 @@ MonoBehaviour:
     preGenerationAnchor: {x: 0, y: 0, z: 0}
     possibleSegments: 0100000002000000050000000600000009000000
     possibleRotationOffsets: 000000005a000000
-  - segmentObject: {fileID: 4257544501625348984, guid: 54e5ea0e1899dca40a7502bd0104a967,
+  - segmentObject: {fileID: 4257544501625348984, guid: 1c1529d94ca3f4247aeaf035ce38028d,
       type: 3}
     postGenerationAnchor: {x: 0, y: 1, z: 0}
     preGenerationAnchor: {x: 0, y: 0, z: 0}
     possibleSegments: 0700000008000000
     possibleRotationOffsets: 00000000
-  - segmentObject: {fileID: 1137245014348610567, guid: 1c1529d94ca3f4247aeaf035ce38028d,
+  - segmentObject: {fileID: 1137245014348610567, guid: a38ef0b5a421e7b4cb24ff9c5cedeb64,
       type: 3}
     postGenerationAnchor: {x: 0, y: 1, z: 0}
     preGenerationAnchor: {x: 0, y: 0, z: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
     preGenerationAnchor: {x: 0, y: 0, z: 0}
     possibleSegments: 0a000000
     possibleRotationOffsets: 00000000
-  - segmentObject: {fileID: 8947375605477744885, guid: 0a7692e9412ccd84f9bde4f2215df350,
+  - segmentObject: {fileID: 8947375605477744885, guid: 4ebaef2f88af7774fb65afbb54b0f1b8,
       type: 3}
     postGenerationAnchor: {x: 0, y: 0, z: 0}
     preGenerationAnchor: {x: 0, y: 2, z: 0}
